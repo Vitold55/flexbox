@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Flexbox на практике</title>
+		<meta charset="utf-8">
+		<style>
+			body{
+				background: #fefefe; 
+				margin: 0; 
+				padding: 0;
+				font:1em/1.3em Arial, Tahoma, "Trebuchet MS", sans-serif;
+				color: #272727;
+			}
+			img{
+				margin: 0; 
+				padding: 0; 
+				vertical-align: middle; 
+				border: none;
+			}
+			.main{
+				margin: 20px; 
+				border: 1px solid #ccc; 
+				padding: 20px; 
+				background: #fff; 
+				border-radius: 3px;
+			}
+			.bl{
+				padding: 5px 10px; 
+				border:1px solid #ddd; 
+				background: #fffde1; 
+				border-radius: 3px;
+				margin: 20px;
+			}
+
+			/* Flexbox styles */
+			/* Не працюють властивості:
+				columns
+				float
+				clear
+				vertical-align
+			*/
+			.main{ /* Flex comtainer */
+				display: flex;
+				/*display: -webkit-flex;*/
+				/*display: -webkit-box;*/
+				/*display: -ms-flexbox;*/
+				/*height: 500px;*/
+				max-width: 1000px;
+				margin: 20px auto;
+				flex-direction: row;
+				/*flex-direction: column;*/
+				/*flex-direction: row-reverse;*/
+				/*flex-direction: column-reverse;*/
+				/*justify-content: flex-start; /!* Прижаті до початку осі *!/*/
+				/*justify-content: flex-end; /!* Прижаті до кінця осі *!/*/
+				/*justify-content: space-between;*/
+				/*justify-content: space-around;*/
+				justify-content: center;
+				/*align-items: stretch;*/
+				/*align-items: flex-start;*/
+				/*align-items: flex-end;*/
+				/*align-items: baseline;*/
+				flex-wrap: wrap; /* Дозвіл розміщувати флекс елементи в кілька рядків */
+				/*flex-wrap: nowrap;*/
+				/*flex-wrap: wrap-reverse;*/
+				align-content: stretch; /* вирівнювання по поперечній осі */
+				/*align-content: space-between;*/
+				/*align-content: space-around;*/
+				/*flex-flow: row wrap; /!* Замість flex-direction і flex-wrap *!/*/
+			}
+			.bl{ /* Flex elements */
+				/*height: 20px;*/
+				/*margin: auto;*/
+				flex-basis: 200px; /* Головний розмір комірки: довжина або ширина, залежно від напряму головної осі */
+				flex-grow: 1; /* Жадність заповнення вільного місця */
+				flex-shrink: 1; /* Ужимання */
+			}
+			.fl1{
+				background-color: #7cd2dd;
+			}
+			.fl2{
+				background-color: #95d051;
+			}
+			.fl3{}
+			.fl4{}
+			.fl5{}
+			.fl6{}
+		</style>
+	</head>
+
+	<body>
+	
+		<div class="main">
+			<div class="bl fl1">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ea error explicabo iusto modi omnis perferendis quod sed totam ullam.</div>
+			<div class="bl fl2">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur magni molestiae nobis quibusdam. Amet autem fugiat modi molestiae quas.</div>
+			<div class="bl fl3">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolore esse sapiente sit. Doloribus facilis nemo pariatur quis rerum veniam.</div>
+			<div class="bl fl4">4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem iusto mollitia? Aliquam, enim eum laudantium provident sapiente tenetur unde.</div>
+			<div class="bl fl5">5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis est excepturi magni nam nulla obcaecati perferendis quod voluptate!</div>
+			<div class="bl fl6">6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem blanditiis dolorum hic in iste laboriosam mollitia nostrum reprehenderit sed?</div>
+		</div>
+	
+	</body>
+</html>
